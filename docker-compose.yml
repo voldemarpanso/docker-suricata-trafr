@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  suricata-trafr:
+    build: .
+    image: suricata-trafr:latest
+    ports:
+      - 37008:37008/udp
+    volumes:
+      - suricata-trafr_logs:/var/log/suricata
+
+volumes:
+  suricata-trafr_logs:
